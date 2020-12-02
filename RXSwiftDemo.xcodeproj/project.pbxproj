@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCCB356C55AA1E941AE53D7 /* Pods-RXSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-RXSwiftDemo/Pods-RXSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		523232432577E088006302A2 /* RXSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523232462577E088006302A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523232482577E088006302A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		523232542577E08D006302A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EA2EA72577E41700116205 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		52EA2EA82577E41700116205 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		86CEAD60C3F39978193C1400 /* Pods-RXSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-RXSwiftDemo/Pods-RXSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B01FD6080D40D292FE779AB2 /* Pods_RXSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -44,12 +46,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02A741E35B6E9E29A5F6488A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86CEAD60C3F39978193C1400 /* Pods-RXSwiftDemo.debug.xcconfig */,
+				4BCCB356C55AA1E941AE53D7 /* Pods-RXSwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5232323A2577E088006302A2 = {
 			isa = PBXGroup;
 			children = (
 				523232452577E088006302A2 /* RXSwiftDemo */,
 				523232442577E088006302A2 /* Products */,
 				C58C9D17465DE9754932F203 /* Frameworks */,
+				02A741E35B6E9E29A5F6488A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,6 +367,7 @@
 		};
 		523232582577E08D006302A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86CEAD60C3F39978193C1400 /* Pods-RXSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +386,7 @@
 		};
 		523232592577E08D006302A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCCB356C55AA1E941AE53D7 /* Pods-RXSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
