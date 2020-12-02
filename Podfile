@@ -6,5 +6,8 @@ target 'RXSwiftDemo' do
   use_frameworks!
 
   # Pods for RXSwiftDemo
+pod 'Alamofire', '~> 4.8'
+pod 'RxSwift', '~> 5.1.0'
+pod 'RxCocoa', '~> 5.1.0'
 
 end
