@@ -15,6 +15,10 @@
 		523232532577E08D006302A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523232512577E08D006302A2 /* LaunchScreen.storyboard */; };
 		52EA2EA92577E41700116205 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EA72577E41700116205 /* ApiRequest.swift */; };
 		52EA2EAA2577E41700116205 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EA82577E41700116205 /* ApiRouter.swift */; };
+		52EA2EAE2577FEBE00116205 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EAD2577FEBE00116205 /* Login.swift */; };
+		52EA2EB02577FF3100116205 /* LoginRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EAF2577FF3100116205 /* LoginRepo.swift */; };
+		52EA2EB62577FFAE00116205 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EB52577FFAE00116205 /* LoginViewController.swift */; };
+		52EA2EB82577FFBD00116205 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EB72577FFBD00116205 /* LoginViewModel.swift */; };
 		E51447976EEE359EE09B7C5C /* Pods_RXSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01FD6080D40D292FE779AB2 /* Pods_RXSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		523232542577E08D006302A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EA2EA72577E41700116205 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		52EA2EA82577E41700116205 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		52EA2EAD2577FEBE00116205 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		52EA2EAF2577FF3100116205 /* LoginRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepo.swift; sourceTree = "<group>"; };
+		52EA2EB52577FFAE00116205 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52EA2EB72577FFBD00116205 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		86CEAD60C3F39978193C1400 /* Pods-RXSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-RXSwiftDemo/Pods-RXSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B01FD6080D40D292FE779AB2 /* Pods_RXSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -52,7 +60,6 @@
 				86CEAD60C3F39978193C1400 /* Pods-RXSwiftDemo.debug.xcconfig */,
 				4BCCB356C55AA1E941AE53D7 /* Pods-RXSwiftDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				52EA2EA62577E40100116205 /* NetworkLayer */,
+				52EA2EAC2577FEAD00116205 /* Model */,
+				52EA2EAB2577FE8A00116205 /* Repo */,
+				52EA2EB12577FF6F00116205 /* Epic */,
 				523232462577E088006302A2 /* AppDelegate.swift */,
 				523232482577E088006302A2 /* SceneDelegate.swift */,
 				5232324A2577E088006302A2 /* ViewController.swift */,
@@ -96,6 +106,39 @@
 				52EA2EA82577E41700116205 /* ApiRouter.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		52EA2EAB2577FE8A00116205 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				52EA2EAF2577FF3100116205 /* LoginRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		52EA2EAC2577FEAD00116205 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52EA2EAD2577FEBE00116205 /* Login.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52EA2EB12577FF6F00116205 /* Epic */ = {
+			isa = PBXGroup;
+			children = (
+				52EA2EB42577FF9200116205 /* Login */,
+			);
+			path = Epic;
+			sourceTree = "<group>";
+		};
+		52EA2EB42577FF9200116205 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				52EA2EB52577FFAE00116205 /* LoginViewController.swift */,
+				52EA2EB72577FFBD00116205 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C58C9D17465DE9754932F203 /* Frameworks */ = {
@@ -224,8 +267,12 @@
 				5232324B2577E088006302A2 /* ViewController.swift in Sources */,
 				523232472577E088006302A2 /* AppDelegate.swift in Sources */,
 				52EA2EAA2577E41700116205 /* ApiRouter.swift in Sources */,
+				52EA2EAE2577FEBE00116205 /* Login.swift in Sources */,
+				52EA2EB62577FFAE00116205 /* LoginViewController.swift in Sources */,
+				52EA2EB02577FF3100116205 /* LoginRepo.swift in Sources */,
 				52EA2EA92577E41700116205 /* ApiRequest.swift in Sources */,
 				523232492577E088006302A2 /* SceneDelegate.swift in Sources */,
+				52EA2EB82577FFBD00116205 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

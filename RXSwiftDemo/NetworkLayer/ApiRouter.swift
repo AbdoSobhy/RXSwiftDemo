@@ -15,33 +15,33 @@ enum ApiRouter: URLRequestConvertible {
         static var baseUrl = "https://the-lace-garment-development.herokuapp.com/"
     }
     
-    case products
-    
+    case login(username: String, password: String)
     
     var url : URL {
         switch self {
-        case .products:
-            return URL(string: Constants.baseUrl)!
+        case .login:
+            return URL(string: "\(Constants.baseUrl)user/login")!
         }
     }
     
     var method : HTTPMethod {
         switch self {
-        case .products:
-            return .get
+        case .login:
+            return .post
             
         }
     }
+    
     var parameters : [String:Any]{
         switch self {
-        default:
-            return [:]
+        case .login(let username, let password):
+            return ["email": username,
+                    "password": password]
         }
     }
+    
     var headers : HTTPHeaders{
         switch self {
-        case .products:
-            return [:]
         default:
             return [:]
         }
