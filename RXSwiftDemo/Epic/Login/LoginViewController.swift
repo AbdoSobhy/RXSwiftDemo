@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
     func loginSuccessModel(){
         self.viewModel.loginResponse.subscribe(onNext: { loginModel in
             // handle of user logged successfully
+            self.alert(message: loginModel.msg, actions: [("OK", .cancel)])
             }).disposed(by: disposeBag)
     }
     
@@ -60,6 +61,7 @@ class LoginViewController: UIViewController {
     func errorMessage(){
         self.viewModel.errorMessage.subscribe(onNext: { errorMessage in
             // handle if username or password is wrong
+            self.alert(message: errorMessage, actions: [("OK", .cancel)])
             }).disposed(by: disposeBag)
     }
 }
