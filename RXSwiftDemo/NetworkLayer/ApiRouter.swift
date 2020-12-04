@@ -16,11 +16,14 @@ enum ApiRouter: URLRequestConvertible {
     }
     
     case login(username: String, password: String)
+    case getLeauges
     
     var url : URL {
         switch self {
         case .login:
             return URL(string: "\(Constants.baseUrl)user/login")!
+        case .getLeauges:
+            return URL(string: "https://www.thesportsdb.com/api/v1/json/1/all_leagues.php")!
         }
     }
     
@@ -28,7 +31,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .login:
             return .post
-            
+        case .getLeauges:
+            return .get
         }
     }
     
@@ -37,6 +41,8 @@ enum ApiRouter: URLRequestConvertible {
         case .login(let username, let password):
             return ["email": username,
                     "password": password]
+        default:
+            return [:]
         }
     }
     

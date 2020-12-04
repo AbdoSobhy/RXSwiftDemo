@@ -14,6 +14,11 @@
 		523232502577E08D006302A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5232324F2577E08D006302A2 /* Assets.xcassets */; };
 		523232532577E08D006302A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523232512577E08D006302A2 /* LaunchScreen.storyboard */; };
 		52559C742579168B00BD2596 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C732579168B00BD2596 /* Alert+Extension.swift */; };
+		52559C7625792F4300BD2596 /* LeaugeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C7525792F4300BD2596 /* LeaugeRepo.swift */; };
+		52559C7A257930D200BD2596 /* Leauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C79257930D200BD2596 /* Leauge.swift */; };
+		52559C7D2579317400BD2596 /* LeaugeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C7C2579317400BD2596 /* LeaugeViewModel.swift */; };
+		52559C7F2579318100BD2596 /* LeaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C7E2579318100BD2596 /* LeaugeViewController.swift */; };
+		52559C8125793A9800BD2596 /* LeaugeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52559C8025793A9800BD2596 /* LeaugeTableViewCell.swift */; };
 		52EA2EA92577E41700116205 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EA72577E41700116205 /* ApiRequest.swift */; };
 		52EA2EAA2577E41700116205 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EA82577E41700116205 /* ApiRouter.swift */; };
 		52EA2EAE2577FEBE00116205 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA2EAD2577FEBE00116205 /* Login.swift */; };
@@ -34,6 +39,11 @@
 		523232522577E08D006302A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		523232542577E08D006302A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52559C732579168B00BD2596 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		52559C7525792F4300BD2596 /* LeaugeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaugeRepo.swift; sourceTree = "<group>"; };
+		52559C79257930D200BD2596 /* Leauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leauge.swift; sourceTree = "<group>"; };
+		52559C7C2579317400BD2596 /* LeaugeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaugeViewModel.swift; sourceTree = "<group>"; };
+		52559C7E2579318100BD2596 /* LeaugeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaugeViewController.swift; sourceTree = "<group>"; };
+		52559C8025793A9800BD2596 /* LeaugeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaugeTableViewCell.swift; sourceTree = "<group>"; };
 		52EA2EA72577E41700116205 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		52EA2EA82577E41700116205 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		52EA2EAD2577FEBE00116205 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -102,6 +112,16 @@
 			path = RXSwiftDemo;
 			sourceTree = "<group>";
 		};
+		52559C7B2579315C00BD2596 /* Leauge */ = {
+			isa = PBXGroup;
+			children = (
+				52559C7C2579317400BD2596 /* LeaugeViewModel.swift */,
+				52559C7E2579318100BD2596 /* LeaugeViewController.swift */,
+				52559C8025793A9800BD2596 /* LeaugeTableViewCell.swift */,
+			);
+			path = Leauge;
+			sourceTree = "<group>";
+		};
 		52EA2EA62577E40100116205 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				52EA2EAF2577FF3100116205 /* LoginRepo.swift */,
+				52559C7525792F4300BD2596 /* LeaugeRepo.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -123,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				52EA2EAD2577FEBE00116205 /* Login.swift */,
+				52559C79257930D200BD2596 /* Leauge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +152,7 @@
 		52EA2EB12577FF6F00116205 /* Epic */ = {
 			isa = PBXGroup;
 			children = (
+				52559C7B2579315C00BD2596 /* Leauge */,
 				52EA2EB42577FF9200116205 /* Login */,
 			);
 			path = Epic;
@@ -269,13 +292,18 @@
 			files = (
 				5232324B2577E088006302A2 /* ViewController.swift in Sources */,
 				523232472577E088006302A2 /* AppDelegate.swift in Sources */,
+				52559C7A257930D200BD2596 /* Leauge.swift in Sources */,
 				52EA2EAA2577E41700116205 /* ApiRouter.swift in Sources */,
 				52EA2EAE2577FEBE00116205 /* Login.swift in Sources */,
 				52EA2EB62577FFAE00116205 /* LoginViewController.swift in Sources */,
+				52559C7D2579317400BD2596 /* LeaugeViewModel.swift in Sources */,
 				52EA2EB02577FF3100116205 /* LoginRepo.swift in Sources */,
 				52559C742579168B00BD2596 /* Alert+Extension.swift in Sources */,
+				52559C7F2579318100BD2596 /* LeaugeViewController.swift in Sources */,
 				52EA2EA92577E41700116205 /* ApiRequest.swift in Sources */,
 				523232492577E088006302A2 /* SceneDelegate.swift in Sources */,
+				52559C7625792F4300BD2596 /* LeaugeRepo.swift in Sources */,
+				52559C8125793A9800BD2596 /* LeaugeTableViewCell.swift in Sources */,
 				52EA2EB82577FFBD00116205 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

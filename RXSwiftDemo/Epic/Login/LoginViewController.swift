@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
     func loginSuccessModel(){
         self.viewModel.loginResponse.subscribe(onNext: { loginModel in
             // handle of user logged successfully
-            self.alert(message: loginModel.msg, actions: [("OK", .cancel)])
+            self.alert(message: loginModel.msg, actions: [("Navigate", .cancel, {_ in self.navigateToLeauges()})])
             }).disposed(by: disposeBag)
     }
     
@@ -63,5 +63,11 @@ class LoginViewController: UIViewController {
             // handle if username or password is wrong
             self.alert(message: errorMessage, actions: [("OK", .cancel)])
             }).disposed(by: disposeBag)
+    }
+    
+    func navigateToLeauges(){
+        guard let leaugeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeaugeViewController") as? LeaugeViewController else {return}
+        leaugeVC.modalPresentationStyle = .fullScreen
+        self.present(leaugeVC, animated: true, completion: nil)
     }
 }
